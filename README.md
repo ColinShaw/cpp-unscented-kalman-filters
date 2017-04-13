@@ -53,8 +53,8 @@ can, to a certain degree, be estimated by looking at the standard deviation of t
 the change in yaw.  Since the "measured" data does not directly include this for the lidar data, and since
 in observing the residuals and noting that there is fairly good correlations between the radar and lidar
 data, I estimated this entirely based on the radar data since it is more convenient.  I found that it is not
-directly useful in the same way that the standard deviation of the residuals is, but it is a reasonable starting 
-point for finding good values.
+quite ad directly useful in the same way that the standard deviation of the residuals is, but it is a 
+reasonable starting point for finding good values.
 
 
 
@@ -86,18 +86,7 @@ Radar NIS:
 ![NIS_Radar.png](images/NIS_Radar.png)
 
 As you can see, awful!  But in this case the RMSE is the more desired metric for performance and the hypothesis 
-of normality of the residuals is a bit questionable.  Below is an example using the same standard deviations for
-the measurements, but using `30.0` for the process standard deviations.  While the RMSE is within bounds for
-the first data set using this, unfortunately it does not mutually satisfy the RMSE with the second data set.
-
-More Appropriate NIS:
-
-![NIS_Appropriate.png](images/NIS_Appropriate.png)
-
-As you can see, not only is the NIS more well-behaved, but the underlying residuals are clearly more 
-normally distributed.  This is because the process standard deviations are larger, so there is not the
-constraint of trying to match the data set as precisely.
-
+of normality of the residuals is a bit questionable.
 
 
 

@@ -118,8 +118,8 @@ void UKF::InitializeMeasurement() {
     double rho_dot = meas_package.raw_measurements(2);
     x << rho * cos(phi),
          rho * sin(phi),
-         rho_dot, 
-         phi,
+         0.0, 
+         0.0,
          0.0;
     P << 1.0, 0.0, 0.0, 0.0, 0.0,
          0.0, 1.0, 0.0, 0.0, 0.0,
